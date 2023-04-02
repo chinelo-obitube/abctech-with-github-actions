@@ -22,7 +22,11 @@
           project_id: ${{ env.PROJECT_ID}}
           export_default_credentials: true
   
-      - name: Build Docker Image
+      - name: 'Create env file'
+        run: |
+          echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: Build Docker Image 
         run: docker build -t $IMAGE_NAME:latest .
   
       - name: Configure Docker Client
