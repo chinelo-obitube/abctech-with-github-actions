@@ -9,7 +9,7 @@
       name: Build and Push to GCR
       runs-on: ubuntu-latest
       env:
-        IMAGE_NAME: devops/article-api
+        IMAGE_NAME: article-api
         PROJECT_ID: my-bitnami-hosting
       
       steps:
