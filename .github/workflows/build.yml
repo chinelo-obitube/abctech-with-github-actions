@@ -41,5 +41,5 @@
           
           docker build -t $SERVICE_NAME .
           docker tag $SERVICE_NAME $ECR_REPOSITORY:$SERVICE_NAME
-          docker push $ECR_REPOSITORY:$SERVICE_NAME
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$SERVICE_NAME
           docker rmi $ECR_REPOSITORY:$SERVICE_NAME
