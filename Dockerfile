@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN composer update --ignore-platform-reqs
+RUN composer install --ignore-platform-reqs --prefer-dist --no-scripts \
+ --no-progress --no-suggest --no-interaction --no-dev --no-autoloader
 
 RUN docker-php-ext-install pdo_mysql
 
